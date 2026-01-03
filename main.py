@@ -1,4 +1,5 @@
 from stats import get_book_words
+from stats import get_book_chars
 
 def get_book_text(book_path):
     with open(book_path) as f:
@@ -6,12 +7,12 @@ def get_book_text(book_path):
         return book_contents
 
 def main():
+# print the book text    
     print(get_book_text(book_path))
+# print number of book words
     print(f"Found {get_book_words(get_book_text(book_path))} total words")
-
-#def get_book_words(get_book_text):
-#    book_words = len(get_book_text.split())
-#    return book_words
+# print number of book characters
+    print(get_book_chars(get_book_text(book_path)))
 
 book_path = "./books/frankenstein.txt"
 
